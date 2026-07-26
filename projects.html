@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — [Your Name]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crosshair crosshair--tl" aria-hidden="true"></div>
+<div class="crosshair crosshair--tr" aria-hidden="true"></div>
+<div class="crosshair crosshair--bl" aria-hidden="true"></div>
+<div class="crosshair crosshair--br" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="topbar__mark" href="index.html">[YOUR NAME]</a>
+  <nav class="topbar__nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html" aria-current="page">Work</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="hero__eyebrow">SHEET 03 — DETAIL</div>
+    <h1 class="page-head__title">Selected work</h1>
+  </section>
+
+  <section class="section is-visible">
+    <article class="project">
+      <div class="project__index">P-01</div>
+      <div class="project__body">
+        <h3>[Project Name]</h3>
+        <p>[One or two sentences: the problem, what you built, the result. Numbers are good — "cut load time by 40%" beats "made it faster."]</p>
+        <ul class="project__tags">
+          <li>[React]</li><li>[Node]</li><li>[Postgres]</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="[repo link]" target="_blank" rel="noopener">Code →</a>
+        <a href="[live link]" target="_blank" rel="noopener">Live →</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__index">P-02</div>
+      <div class="project__body">
+        <h3>[Project Name]</h3>
+        <p>[Same structure: problem, build, result.]</p>
+        <ul class="project__tags">
+          <li>[Python]</li><li>[FastAPI]</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="[repo link]" target="_blank" rel="noopener">Code →</a>
+        <a href="[live link]" target="_blank" rel="noopener">Live →</a>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project__index">P-03</div>
+      <div class="project__body">
+        <h3>[Project Name]</h3>
+        <p>[Same structure: problem, build, result.]</p>
+        <ul class="project__tags">
+          <li>[Your stack]</li>
+        </ul>
+      </div>
+      <div class="project__links">
+        <a href="[repo link]" target="_blank" rel="noopener">Code →</a>
+        <a href="[live link]" target="_blank" rel="noopener">Live →</a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="titleblock" id="contact">
+  <div class="titleblock__cell titleblock__cell--wide">
+    <span class="titleblock__label">Name</span>
+    <span class="titleblock__value">[Your Name]</span>
+  </div>
+  <div class="titleblock__cell">
+    <span class="titleblock__label">Scale</span>
+    <span class="titleblock__value">1:1</span>
+  </div>
+  <div class="titleblock__cell">
+    <span class="titleblock__label">Date</span>
+    <span class="titleblock__value" id="today">—</span>
+  </div>
+  <div class="titleblock__cell titleblock__cell--wide">
+    <span class="titleblock__label">Contact</span>
+    <span class="titleblock__value">
+      <a href="mailto:[you@example.com]">[you@example.com]</a> ·
+      <a href="[github link]" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="[linkedin link]" target="_blank" rel="noopener">LinkedIn</a>
+    </span>
+  </div>
+  <div class="titleblock__cell">
+    <span class="titleblock__label">Sheet</span>
+    <span class="titleblock__value">03 of 05</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
