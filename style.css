@@ -267,6 +267,22 @@ main { max-width: 900px; margin: 0 auto; padding: 0 var(--edge); }
   .stack { grid-template-columns: 1fr; }
 }
 
+/* ---------- hobbies (about page) ---------- */
+.hobbies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.hobby h3 {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.hobby p { color: var(--text-mute); margin: 0; font-size: 14px; }
+@media (max-width: 700px) {
+  .hobbies { grid-template-columns: 1fr; }
+}
+
 /* ---------- projects ---------- */
 .project {
   display: grid;
