@@ -307,20 +307,77 @@ main { max-width: 900px; margin: 0 auto; padding: 0 var(--edge); }
   .stack { grid-template-columns: 1fr; }
 }
 
-/* ---------- hobbies (about page) ---------- */
+/* ---------- hobbies (about page) — collapsible entries ---------- */
 .hobbies {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  display: flex;
+  flex-direction: column;
 }
-.hobby h3 {
+.hobby {
+  border-bottom: 1px solid var(--line);
+}
+.hobby:first-child { border-top: 1px solid var(--line); }
+
+.hobby__summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 4px;
+}
+.hobby__summary::-webkit-details-marker { display: none; }
+.hobby__summary::marker { content: ""; }
+
+.hobby__title {
+  font-family: var(--font-mono);
   font-size: 1rem;
-  color: var(--accent);
-  margin-bottom: 8px;
+  color: var(--text);
 }
-.hobby p { color: var(--text-mute); margin: 0; font-size: 14px; }
-@media (max-width: 700px) {
-  .hobbies { grid-template-columns: 1fr; }
+
+.hobby__icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.hobby__icon::before, .hobby__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--accent);
+}
+.hobby__icon::before { width: 100%; height: 1px; top: 50%; left: 0; }
+.hobby__icon::after {
+  width: 1px; height: 100%; left: 50%; top: 0;
+  transition: transform 0.15s ease;
+}
+.hobby[open] .hobby__icon::after { transform: scaleY(0); }
+
+.hobby__content {
+  padding: 0 4px 26px;
+  color: var(--text-mute);
+}
+.hobby__content p { margin: 0 0 16px; max-width: 62ch; }
+
+.hobby__media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.hobby__photo {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+.hobby__video {
+  width: 320px;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  display: block;
+}
+@media (max-width: 500px) {
+  .hobby__photo, .hobby__video { width: 100%; }
 }
 
 /* ---------- projects ---------- */
